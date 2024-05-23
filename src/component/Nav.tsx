@@ -8,6 +8,7 @@ import { motion } from "framer-motion";
 import Test from "@page/test";
 import Wave from "@component/wave";
 import Wave2 from "@component/wave2";
+// import { Link } from "react-router-dom";
 
 const Nav: React.FC = () => {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -142,7 +143,8 @@ const Nav: React.FC = () => {
               >
                 {item}
               </motion.a>
-            ))}
+            ))} 
+              {/* <Link to={"#about"}>About</Link> */}
           </motion.div>
         </div>
       </nav>
