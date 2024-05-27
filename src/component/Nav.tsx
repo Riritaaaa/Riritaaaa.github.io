@@ -1,5 +1,5 @@
 import "./style.css";
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import Home from "@page/Home";
 import Port from "@page/Port";
 import About from "@page/About";
@@ -8,12 +8,26 @@ import { motion } from "framer-motion";
 import Test from "@page/test";
 import Wave from "@component/wave";
 import Wave2 from "@component/wave2";
-// import { Link } from "react-router-dom";
+import Lenis from "lenis";
 
 const Nav: React.FC = () => {
   const [menuOpen, setMenuOpen] = useState(false);
   const [isDesktop, setIsDesktop] = useState(window.innerWidth >= 1025);
   const [isHome, setIsHome] = useState(true);
+
+  const lenis = useRef<Lenis>();
+  useEffect(() => {
+
+      lenis.current = new Lenis();
+
+      function raf(time: DOMHighResTimeStamp) {
+        lenis.current&&lenis.current.raf(time);
+        requestAnimationFrame(raf);
+      }
+
+      requestAnimationFrame(raf);
+    
+  }, []);
 
   useEffect(() => {
     const handleResize = () => {
@@ -46,7 +60,7 @@ const Nav: React.FC = () => {
             link.classList.remove("active");
             const navId = id ? id : "";
             document
-              .querySelector(`nav a[href*='${navId}']`)
+              .querySelector(`nav a[id*='${navId}']`)
               ?.classList.add("active");
           });
 
@@ -98,9 +112,9 @@ const Nav: React.FC = () => {
   };
 
   return (
-    <div>
+    <div >
       <nav className={isHome ? "transparent-nav" : ""}>
-        <div className="navbarres">
+        <div className="navbarres select-none">
           {!isDesktop && (
             <>
               <input
@@ -122,7 +136,7 @@ const Nav: React.FC = () => {
           )}
 
           <div>
-            <a href="#" className="logo uppercase tracking-wider">
+            <a onClick={() => {lenis.current?.scrollTo(`#home`)}} className="logo uppercase tracking-wider">
               Portfolio
             </a>
           </div>
@@ -135,7 +149,8 @@ const Nav: React.FC = () => {
             {["Home", "About", "Portfolio", "Contact"].map((item, index) => (
               <motion.a
                 key={item}
-                href={`#${item.toLowerCase()}`}
+                onClick={() => {lenis.current?.scrollTo(`#${item.toLowerCase()}`)}}
+                id={`#${item.toLowerCase()}`}
                 custom={index}
                 animate={isDesktop || menuOpen ? "visible" : "hidden"}
                 variants={menuVariants}
@@ -143,27 +158,26 @@ const Nav: React.FC = () => {
               >
                 {item}
               </motion.a>
-            ))} 
-              {/* <Link to={"#about"}>About</Link> */}
+            ))}
           </motion.div>
         </div>
       </nav>
 
-      <section id="home">
+       <section id="home">
         <Home />
       </section>
       <Test />
       <section id="about">
         <About />
       </section>
-      <Wave />
+       <Wave />
       <section id="portfolio">
         <Port />
       </section>
       <Wave2 />
       <section id="contact">
         <Contact />
-      </section>
+      </section> 
     </div>
   );
 };

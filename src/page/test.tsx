@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { Fragment, useEffect, useState } from "react";
 import cat from "@assets/40_20240520220812.png";
 
 const Test = () => {
@@ -26,16 +26,15 @@ const Test = () => {
         <div className="scroll">
           <div className="flex flex-row">
             {Array.from({ length: imagesCount }).map((_, index) => (
-              <>
+              <Fragment key={index}>
                 <img
-                  key={index}
                   className="self-center imgcat"
                   src={cat}
                   alt="cat"
                 />
 
                 <div className="self-center text-[#bc2872] text-[18px]">✿</div>
-              </>
+              </Fragment>
             ))}
           </div>
         </div>

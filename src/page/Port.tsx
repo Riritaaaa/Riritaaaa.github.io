@@ -96,31 +96,31 @@ const Port = () => {
                   d="M110.677 57.635s-1.826 3.912 2.206 7.82c4.032 3.91 7.86.79 7.86.79M143.635 85.076s-1.826 3.912 2.206 7.82c4.032 3.91 7.86.79 7.86.79"
                   fill="none"
                   stroke="#ececec"
-                  stroke-width="6.774"
-                  stroke-linecap="round"
+                  strokeWidth="6.774"
+                  strokeLinecap="round"
                 />
                 <path
                   d="M104.733 80.926s3.077 8.615 6.49 10.237c3.416 1.623 10.488-1.248 10.488-1.248l3.996-4.744 5.243-.25-6.742-3.494 1.498 3.745-4.245 5.494s.47 8.58 2.997 10.736c2.53 2.157 8.74 1 8.74 1"
                   fill="none"
                   stroke="#ececec"
-                  stroke-width="6.774"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
+                  strokeWidth="6.774"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
                 />
                 <g
                   stroke="#1a1a1a"
                   fill="none"
-                  stroke-width="6"
-                  stroke-linecap="round"
+                  strokeWidth="6"
+                  strokeLinecap="round"
                 >
                   <path
                     d="M189.063 252.215s1.826-3.912-2.206-7.82c-4.032-3.91-7.86-.79-7.86-.79M156.105 224.773s1.826-3.91-2.206-7.82c-4.033-3.91-7.862-.79-7.862-.79"
-                    stroke-width="6.77406"
+                    strokeWidth="6.77406"
                   />
                   <path
                     d="M195.007 228.923s-3.077-8.614-6.492-10.236c-3.414-1.623-10.486 1.248-10.486 1.248l-3.996 4.744-5.243.25 6.742 3.494-1.498-3.745 4.245-5.494s-.47-8.58-2.997-10.736c-2.53-2.157-8.74-1-8.74-1"
-                    stroke-linejoin="round"
-                    stroke-width="6.77406"
+                    strokeLinejoin="round"
+                    strokeWidth="6.77406"
                   />
                 </g>
               </svg>

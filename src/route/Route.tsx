@@ -1,6 +1,5 @@
 import { createBrowserRouter } from "react-router-dom";
 import Nav from "@component/Nav";
-
 const route = createBrowserRouter([
   {
     path: "/",

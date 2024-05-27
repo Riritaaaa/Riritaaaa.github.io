@@ -4,7 +4,20 @@ import "@component/style.css";
 import Cursor from "@component/Cursor";
 
 function App() {
-
+/*   const lenis=useRef<Lenis>()
+  useEffect(()=>{
+   if(lenis.current){
+    lenis.current = new Lenis()
+    
+    function raf(time:DOMHighResTimeStamp) {
+      lenis.current.raf(time)
+      requestAnimationFrame(raf)
+    }
+    
+    requestAnimationFrame(raf)
+   }
+  },[])
+ */
   return (
     <>
       {/* <CursorifyProvider cursor={<Cursor />}> */}
