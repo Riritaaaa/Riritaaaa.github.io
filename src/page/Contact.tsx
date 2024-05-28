@@ -151,13 +151,18 @@ export default function Contact() {
                   required
                 />
               </div>
-              <button type="submit">
-                Submit
-                <span></span>
-                <span></span>
-                <span></span>
-                <span></span>
-              </button>
+              <motion.div
+                whileTap={{ scale: 0.90 }}
+                transition={{ type: "spring", stiffness: 400, damping: 17 }}
+              >
+                <button type="submit">
+                  Submit
+                  <span></span>
+                  <span></span>
+                  <span></span>
+                  <span></span>
+                </button>
+              </motion.div>
             </form>
             <div className="contact-right">
               <div className="grid gap-20 gap-y-12 lg:mt-[45px] mt-[55px]">
@@ -172,9 +177,7 @@ export default function Contact() {
                   >
                     <div className="contactbox xl:px-[50px] md:py-[12px] md:px-[75px] px-[25px] py-[8px]">
                       <FontAwesomeIcon className="icon" icon={faGithub} />
-                      <div className="md:pt-1">
-                        github.com/Riritaaaa
-                      </div>
+                      <div className="md:pt-1">github.com/Riritaaaa</div>
                     </div>
                   </motion.div>
                 </a>
@@ -190,9 +193,7 @@ export default function Contact() {
                   >
                     <div className="contactbox xl:px-[47px] md:py-[12px] md:px-[72px] py-[8px] px-[22px]">
                       <FontAwesomeIcon className="icon" icon={faEnvelope} />
-                      <div className="md:pt-1">
-                        rita_ch@kkumail.com
-                      </div>
+                      <div className="md:pt-1">rita_ch@kkumail.com</div>
                     </div>
                   </motion.div>
                 </a>
@@ -207,9 +208,7 @@ export default function Contact() {
                   >
                     <div className="contactbox xl:px-[50px] md:py-[12px] md:px-[75px] py-[8px] px-[25px]">
                       <FontAwesomeIcon className="icon" icon={faFacebook} />
-                      <div className="md:pt-1">
-                        facebook.com/Rita Rt
-                      </div>
+                      <div className="md:pt-1">facebook.com/Rita Rt</div>
                     </div>
                   </motion.div>
                 </a>
@@ -224,9 +223,7 @@ export default function Contact() {
                   >
                     <div className="contactbox xl:px-[75px] md:py-[13px] md:px-[100px] py-[9px] px-[40px]">
                       <FontAwesomeIcon className="icon2" icon={faPhone} />
-                      <div className="md:pt-1">
-                        (+66) 95-138-3141
-                      </div>
+                      <div className="md:pt-1">(+66) 95-138-3141</div>
                     </div>
                   </motion.div>
                 </a>

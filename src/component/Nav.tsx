@@ -114,7 +114,7 @@ const Nav: React.FC = () => {
   return (
     <div >
       <nav className={isHome ? "transparent-nav" : ""}>
-        <div className="navbarres select-none">
+        <div className="navbarres select-none ">
           {!isDesktop && (
             <>
               <input
@@ -136,13 +136,13 @@ const Nav: React.FC = () => {
           )}
 
           <div>
-            <a onClick={() => {lenis.current?.scrollTo(`#home`)}} className="logo uppercase tracking-wider">
+            <a onClick={() => {lenis.current?.scrollTo(`#home`)}} className="logo uppercase tracking-wider cursor-pointer">
               riritaa
             </a>
           </div>
 
           <motion.div
-            className={`navbar menu-items wrapper ${
+            className={`cursor-pointer navbar menu-items wrapper ${
               !isDesktop && isHome ? "transparent-menu" : ""
             }`}
           >
