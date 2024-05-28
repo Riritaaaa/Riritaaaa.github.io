@@ -114,6 +114,7 @@ export default function Contact() {
               method="POST"
               className="contact-left"
             >
+              <input type="hidden" name="redirect" value="#"></input>
               <input
                 type="hidden"
                 name="access_key"

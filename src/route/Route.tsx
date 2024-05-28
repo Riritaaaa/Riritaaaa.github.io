@@ -1,5 +1,7 @@
 import { createBrowserRouter } from "react-router-dom";
 import Nav from "@component/Nav";
+import Notfound from "@page/Notfound";
+
 const route = createBrowserRouter([
   {
     path: "/",
@@ -14,6 +16,9 @@ const route = createBrowserRouter([
         element: <Port id="port" />,
       },
     ], */
+  },{
+    path:"*",
+    element: <Notfound/>
   },
 ]);/*,{basename:"/portfolio"}*/
 

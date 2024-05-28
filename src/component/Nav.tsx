@@ -137,7 +137,7 @@ const Nav: React.FC = () => {
 
           <div>
             <a onClick={() => {lenis.current?.scrollTo(`#home`)}} className="logo uppercase tracking-wider">
-              Portfolio
+              riritaa
             </a>
           </div>
 
