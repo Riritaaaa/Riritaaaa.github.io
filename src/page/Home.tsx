@@ -60,7 +60,7 @@ function ParallaxText({ children, baseVelocity = 100 }: ParallaxProps) {
 const Home = () => {
   return (
     <div className="w-full min-h-screen relative bg-[#bc2872] ">
-      <div className="h-screen">
+      <div className="h-screen cursor-default">
         <ParallaxText baseVelocity={-3}>Welcome to my portfolio</ParallaxText>
         <ParallaxText baseVelocity={3}>Welcome to my portfolio</ParallaxText>
         <ParallaxText baseVelocity={-3}>Welcome to my portfolio</ParallaxText>
