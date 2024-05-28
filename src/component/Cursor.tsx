@@ -1,4 +1,4 @@
-import AnimatedCursor from "react-animated-cursor";
+/* import AnimatedCursor from "react-animated-cursor";
 
 const Cursor = () => {
   return (
@@ -21,7 +21,7 @@ const Cursor = () => {
   );
 };
 
-export default Cursor;
+export default Cursor; */
 
 /* import { CursorProps, useCursorify } from '@cursorify/react'
 import React from 'react'
